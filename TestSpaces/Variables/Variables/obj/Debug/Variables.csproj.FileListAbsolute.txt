@@ -1,0 +1,7 @@
+E:\Game Dev Year 2\Logic-and-Programming-I\TestSpaces\Variables\Variables\bin\Debug\Variables.exe.config
+E:\Game Dev Year 2\Logic-and-Programming-I\TestSpaces\Variables\Variables\bin\Debug\Variables.exe
+E:\Game Dev Year 2\Logic-and-Programming-I\TestSpaces\Variables\Variables\bin\Debug\Variables.pdb
+E:\Game Dev Year 2\Logic-and-Programming-I\TestSpaces\Variables\Variables\obj\Debug\Variables.csproj.AssemblyReference.cache
+E:\Game Dev Year 2\Logic-and-Programming-I\TestSpaces\Variables\Variables\obj\Debug\Variables.csproj.CoreCompileInputs.cache
+E:\Game Dev Year 2\Logic-and-Programming-I\TestSpaces\Variables\Variables\obj\Debug\Variables.exe
+E:\Game Dev Year 2\Logic-and-Programming-I\TestSpaces\Variables\Variables\obj\Debug\Variables.pdb
