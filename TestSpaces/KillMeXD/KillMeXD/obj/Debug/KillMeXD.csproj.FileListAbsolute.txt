@@ -1,0 +1,7 @@
+E:\Logic-and-Programming-I\TestSpaces\KillMeXD\KillMeXD\bin\Debug\KillMeXD.exe.config
+E:\Logic-and-Programming-I\TestSpaces\KillMeXD\KillMeXD\bin\Debug\KillMeXD.exe
+E:\Logic-and-Programming-I\TestSpaces\KillMeXD\KillMeXD\bin\Debug\KillMeXD.pdb
+E:\Logic-and-Programming-I\TestSpaces\KillMeXD\KillMeXD\obj\Debug\KillMeXD.csproj.AssemblyReference.cache
+E:\Logic-and-Programming-I\TestSpaces\KillMeXD\KillMeXD\obj\Debug\KillMeXD.csproj.CoreCompileInputs.cache
+E:\Logic-and-Programming-I\TestSpaces\KillMeXD\KillMeXD\obj\Debug\KillMeXD.exe
+E:\Logic-and-Programming-I\TestSpaces\KillMeXD\KillMeXD\obj\Debug\KillMeXD.pdb
