@@ -1,7 +1,0 @@
-C:\Users\zoozo\My Stuff\Game Development Year 2\Logic-and-Programming-I\Assignments\LDMI_HelloWorld\LDMI_HelloWorld\bin\Debug\LDMI_HelloWorld.exe.config
-C:\Users\zoozo\My Stuff\Game Development Year 2\Logic-and-Programming-I\Assignments\LDMI_HelloWorld\LDMI_HelloWorld\bin\Debug\LDMI_HelloWorld.exe
-C:\Users\zoozo\My Stuff\Game Development Year 2\Logic-and-Programming-I\Assignments\LDMI_HelloWorld\LDMI_HelloWorld\bin\Debug\LDMI_HelloWorld.pdb
-C:\Users\zoozo\My Stuff\Game Development Year 2\Logic-and-Programming-I\Assignments\LDMI_HelloWorld\LDMI_HelloWorld\obj\Debug\LDMI_HelloWorld.csproj.AssemblyReference.cache
-C:\Users\zoozo\My Stuff\Game Development Year 2\Logic-and-Programming-I\Assignments\LDMI_HelloWorld\LDMI_HelloWorld\obj\Debug\LDMI_HelloWorld.csproj.CoreCompileInputs.cache
-C:\Users\zoozo\My Stuff\Game Development Year 2\Logic-and-Programming-I\Assignments\LDMI_HelloWorld\LDMI_HelloWorld\obj\Debug\LDMI_HelloWorld.exe
-C:\Users\zoozo\My Stuff\Game Development Year 2\Logic-and-Programming-I\Assignments\LDMI_HelloWorld\LDMI_HelloWorld\obj\Debug\LDMI_HelloWorld.pdb
