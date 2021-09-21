@@ -57,6 +57,25 @@ namespace Variables
             price = 1.23f + 3; // assigned price a decimal value, adding a whole number to it
             Console.WriteLine("Chocolate poptart and orenge poptart is: $" + price);
             Console.ReadKey(true);
+
+
+            //order of execution
+            poptarts = poptarts - 400;
+            Console.WriteLine("oh noooo now there are only " + poptarts);
+            poptarts = poptarts + 460;
+            poptarts = 200;
+            poptarts = 3000;
+
+            //formulas
+            int sprinkles;
+            int poptartsWithoutSprinkles;
+
+            sprinkles = 100;  
+            poptartsWithoutSprinkles = 0;
+
+            Console.WriteLine("Sprinkles: " + sprinkles);
+            poptartsWithoutSprinkles = poptartsWithoutSprinkles + sprinkles;
+            Console.WriteLine("poptartsWithoutSprinkles " + poptartsWithoutSprinkles);
         }
     }
 }
