@@ -58,7 +58,7 @@ namespace LPI_Variables_HUDv1._0
 
 			// score = score + points * multiplier
 			// ^ is the right answer XD. I didnt even need a method.
-			// the way I did it still works, its just not correct implementation.
+			// the way I did it still works, its just not correct implementation, also the multiplier number shouldnt be a magic number
 		}
 
 
