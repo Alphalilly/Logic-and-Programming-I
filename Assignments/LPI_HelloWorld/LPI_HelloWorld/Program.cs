@@ -22,8 +22,15 @@ namespace LDMI_HelloWorld
             Console.WriteLine("Also pretty colours");
             Console.ReadKey(true);
 
-            Console.WriteLine("k im done now bai-"); //your not suposed to see this.. thats the joke. IM FUNNY HAHAHA
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("You can type stuff now! press enter to close the program.");
+            Console.ReadLine();
 
+            //dw about this i tried and failed. and i wanna try later XD
+            //Console.WriteLine("You can type stuff now. Press 1 2 or 3 to change colours while typing! :3c ");
+            //string typeStuff = Console.ReadLine();
+            //Console.WriteLine(typeStuff);
+            //int convertToNum = Convert.ToInt32(typeStuff);
         }
     }
 }

@@ -5,3 +5,10 @@ C:\Users\zoozo\My Stuff\Game Development Year 2\Logic-and-Programming-I\Assignme
 C:\Users\zoozo\My Stuff\Game Development Year 2\Logic-and-Programming-I\Assignments\LPI_HelloWorld\LPI_HelloWorld\obj\Debug\LPI_HelloWorld.csproj.CoreCompileInputs.cache
 C:\Users\zoozo\My Stuff\Game Development Year 2\Logic-and-Programming-I\Assignments\LPI_HelloWorld\LPI_HelloWorld\obj\Debug\LPI_HelloWorld.exe
 C:\Users\zoozo\My Stuff\Game Development Year 2\Logic-and-Programming-I\Assignments\LPI_HelloWorld\LPI_HelloWorld\obj\Debug\LPI_HelloWorld.pdb
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_HelloWorld\LPI_HelloWorld\bin\Debug\LPI_HelloWorld.exe.config
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_HelloWorld\LPI_HelloWorld\bin\Debug\LPI_HelloWorld.exe
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_HelloWorld\LPI_HelloWorld\bin\Debug\LPI_HelloWorld.pdb
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_HelloWorld\LPI_HelloWorld\obj\Debug\LPI_HelloWorld.csproj.AssemblyReference.cache
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_HelloWorld\LPI_HelloWorld\obj\Debug\LPI_HelloWorld.csproj.CoreCompileInputs.cache
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_HelloWorld\LPI_HelloWorld\obj\Debug\LPI_HelloWorld.exe
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_HelloWorld\LPI_HelloWorld\obj\Debug\LPI_HelloWorld.pdb
