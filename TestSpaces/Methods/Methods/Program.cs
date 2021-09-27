@@ -49,8 +49,8 @@ namespace Methods
         static void ShowHUD()
         {
             Console.WriteLine("name = " + name);
-            Console.WriteLine("score = " + money);
-            Console.WriteLine("xp = " + poptarts);
+            Console.WriteLine("money = " + money);
+            Console.WriteLine("poptarts = " + poptarts);
             Console.WriteLine();
             Console.ReadKey(true);
         }
