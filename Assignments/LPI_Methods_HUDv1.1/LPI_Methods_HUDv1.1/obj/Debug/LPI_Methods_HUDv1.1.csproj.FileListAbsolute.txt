@@ -1,0 +1,7 @@
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Methods_HUDv1.1\LPI_Methods_HUDv1.1\obj\Debug\LPI_Methods_HUDv1.1.csproj.AssemblyReference.cache
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Methods_HUDv1.1\LPI_Methods_HUDv1.1\obj\Debug\LPI_Methods_HUDv1.1.csproj.CoreCompileInputs.cache
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Methods_HUDv1.1\LPI_Methods_HUDv1.1\bin\Debug\LPI_Methods_HUDv1.1.exe.config
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Methods_HUDv1.1\LPI_Methods_HUDv1.1\bin\Debug\LPI_Methods_HUDv1.1.exe
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Methods_HUDv1.1\LPI_Methods_HUDv1.1\bin\Debug\LPI_Methods_HUDv1.1.pdb
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Methods_HUDv1.1\LPI_Methods_HUDv1.1\obj\Debug\LPI_Methods_HUDv1.1.exe
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Methods_HUDv1.1\LPI_Methods_HUDv1.1\obj\Debug\LPI_Methods_HUDv1.1.pdb
