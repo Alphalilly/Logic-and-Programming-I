@@ -14,6 +14,8 @@ namespace LPI_Methods_HUDv1._1
 		// operators: Score Multiplier. Starting with (x2) and muliplies in by the power of 2 (x4, x6, x8, x10)
 		// extra: Formatted Ascii text, more methods, Coloured text, a score subtractor/divider? (when damage taken, lose score beased on damage taken)
 
+		// note to self: plz format text, Add Ascii, and coluored text next time ><'
+
 		//Variables (is a thing)
 		static int health;
 		static int attack;
