@@ -13,6 +13,7 @@ namespace LPI_Methods_HUDv1._1
 		// Methods:  ShowHUD(), TakeDamage(int damage), AddScore(int enemyValue, int scoreMultiplier)
 		// operators: Score Multiplier. Starting with (x2) and muliplies in by the power of 2 (x4, x6, x8, x10)
 		// extra: Formatted Ascii text, more methods, Coloured text, a score subtractor/divider? (when damage taken, lose score beased on damage taken)
+		// https://theasciicode.com.ar/
 
 		// note to self: plz format text, Add Ascii, and coluored text next time ><'
 
@@ -37,14 +38,53 @@ namespace LPI_Methods_HUDv1._1
 
 		class Game
         {
+			static void Boarder(float increment)
+            {
+				if (increment == 1)
+				{
+					Console.WriteLine("»══════¤══════«");
+				}
+				else if (increment == 1.5f)
+				{
+					Console.WriteLine("»═════════¤═════════«");
+				}
+				else if (increment == 2)
+                {
+					Console.WriteLine("»════════════¤════════════«");
+				}
+				else if (increment == 2.5f)
+				{
+					Console.WriteLine("»═══════════════¤═══════════════«");
+				}
+				else if (increment == 3)
+                {
+					Console.WriteLine("»══════════════════¤══════════════════«");
+				}
+                else
+                {
+
+                }
+			}
+
 			//methods (does a thing)
 			static void ShowHUD()
 			{
-				Console.WriteLine("Player name: Dumb Protagonist");
-				Console.WriteLine("Health: " + health);
-				Console.WriteLine("Attack Power: " + attack);
-				Console.WriteLine("Lives: " + lives);
-				Console.WriteLine("Score: " + score);
+				Console.ForegroundColor = ConsoleColor.DarkCyan;
+
+				Boarder(2.5f);
+
+				Console.WriteLine($"§\tDumb Protagonist\t§");
+				Console.WriteLine("---------------------------------");
+
+				Console.WriteLine("» Health: " + health);
+				Console.WriteLine("» Attack Power: " + attack);
+				Console.WriteLine($"» Lives: " + lives);
+				Console.WriteLine("» Score: " + score);
+
+				Boarder(2.5f);
+
+				Console.ForegroundColor = ConsoleColor.Yellow;
+
 				Console.WriteLine();
 			}
 
@@ -96,17 +136,17 @@ namespace LPI_Methods_HUDv1._1
 
 				void event1()
 				{
-					Console.WriteLine("An Enemey Has appeared!");
+					Console.WriteLine("! An Enemey Has appeared!");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
-					Console.WriteLine("Player Attacked! Player dealt " + attack + " in damage to Enemy");
+					Console.WriteLine("> Player Attacked! Player dealt " + attack + " in damage to Enemy");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
 					points = 5.5f;
 					AddScore(points, 1);
-					Console.WriteLine("Player gained " + points + " Score");
+					Console.WriteLine("> Player gained " + points + " Score");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
@@ -120,7 +160,7 @@ namespace LPI_Methods_HUDv1._1
 				{
 					damage = 20; // me small brain
 					takeDamage(damage); // DAMN IT YOU CAN FAAKING PUT VARIABLES IN THE BRACKETS OF METHODS W H A T?!
-					Console.WriteLine("Enemy Attacked! Player has taken " + damage + " in damage From Enemy");
+					Console.WriteLine("! Enemy Attacked! Player has taken " + damage + " in damage From Enemy");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
@@ -129,7 +169,7 @@ namespace LPI_Methods_HUDv1._1
 
 					heal = 10;
 					Heal(heal);
-					Console.WriteLine("Player healed " + heal + " HP");
+					Console.WriteLine("> Player healed " + heal + " HP");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
@@ -143,7 +183,7 @@ namespace LPI_Methods_HUDv1._1
 				{
 					damage = 90; //note to self. do range cheking for values and prevent overflow into the negative values.
 					takeDamage(damage);
-					Console.WriteLine("Enemy Attacked! Player has take " + damage + " in damage From Enemy, its a critical hit!");
+					Console.WriteLine("! Enemy Attacked! Player has take " + damage + " in damage From Enemy, its a critical hit!");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
@@ -151,7 +191,7 @@ namespace LPI_Methods_HUDv1._1
 					Console.ReadKey(true);
 
 					Revive();
-					Console.WriteLine("Player Revives! " + lives + " Lives Remain");
+					Console.WriteLine("> Player Revives! " + lives + " Lives Remain");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
@@ -165,29 +205,29 @@ namespace LPI_Methods_HUDv1._1
 				{
 					powerUp = 100;
 					PowerUp (powerUp);
-					Console.WriteLine("Player gains a power up! Attack Power increased by " + powerUp);
+					Console.WriteLine("> Player gains a power up! Attack Power increased by " + powerUp);
 					Console.WriteLine();
 					Console.ReadKey(true);
 
 					ShowHUD();
 					Console.ReadKey(true);
 
-					Console.WriteLine("Player Attacked! Player dealt " + attack + " in damage to Enemy. Its a Critical hit!");
+					Console.WriteLine("> Player Attacked! Player dealt " + attack + " in damage to Enemy. Its a Critical hit!");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
-					Console.WriteLine("Enemy Dies");
+					Console.WriteLine("! Enemy Dies");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
 
 					points = 50.5f;
-					Console.WriteLine("Player gained " + points + " points");
+					Console.WriteLine("> Player gained " + points + " points");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
 					AddScore(points, 2);
-					Console.WriteLine("Player points doubled! now is " + points);
+					Console.WriteLine("> Player points doubled! now is " + points);
 					Console.WriteLine();
 					Console.ReadKey(true);
 
