@@ -1,0 +1,7 @@
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Conditionals_HUDv1.2\LPI_Conditionals_HUDv1.2\bin\Debug\LPI_Conditionals_HUDv1.2.exe.config
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Conditionals_HUDv1.2\LPI_Conditionals_HUDv1.2\bin\Debug\LPI_Conditionals_HUDv1.2.exe
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Conditionals_HUDv1.2\LPI_Conditionals_HUDv1.2\bin\Debug\LPI_Conditionals_HUDv1.2.pdb
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Conditionals_HUDv1.2\LPI_Conditionals_HUDv1.2\obj\Debug\LPI_Conditionals_HUDv1.2.csproj.AssemblyReference.cache
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Conditionals_HUDv1.2\LPI_Conditionals_HUDv1.2\obj\Debug\LPI_Conditionals_HUDv1.2.csproj.CoreCompileInputs.cache
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Conditionals_HUDv1.2\LPI_Conditionals_HUDv1.2\obj\Debug\LPI_Conditionals_HUDv1.2.exe
+E:\Game Dev Year 2\Logic-and-Programming-I\Assignments\LPI_Conditionals_HUDv1.2\LPI_Conditionals_HUDv1.2\obj\Debug\LPI_Conditionals_HUDv1.2.pdb
