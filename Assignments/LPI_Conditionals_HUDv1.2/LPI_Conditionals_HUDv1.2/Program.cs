@@ -8,11 +8,10 @@ namespace LPI_Conditionals_HUDv1._2
 {
 	class Program
 	{
-		// use HUD From previous assignment, and demonstrate the use of Conditionals (if, else, else if, etc)
-		// Variables: 
-		// Methods:  
-		// operators: 
-		// extra: 
+		// use HUD From previous assignment, and demonstrate the use of Conditionals. in pretend gameplay.
+		// Variables: health, Weapon.
+		// Methods: ChangeWeapon, TakeDamage, Heal, SHowHUD
+		// extra: use enums, error checking, switch statements.
 		// https://theasciicode.com.ar/
 
 		static int health;
@@ -24,17 +23,21 @@ namespace LPI_Conditionals_HUDv1._2
 		static float points;
 		static int damage;
 		static int heal;
-		static int powerUp;
 
-		public enum Weapon //putting this in a test class breaks it. Am I botherd to figure out why? no. so in class program it will stay. :)
-		{
-			Pistol,
-			ShotGun,
-			Spreader,
-			Laser,
-			Sniper,
-			BFG
-		}
+		//static bool alive; // yeah, decided not to do this. 
+
+		static string weapon;
+
+		//public enum Weapon //eh, i gave up on this lol. enums are weird.
+		//{
+		//	NA,
+		//	Pistol,
+		//	ShotGun,
+		//	Spreader,
+		//	Laser,
+		//	Sniper,
+		//	BFG
+		//}
 
 		static void Main()
 		{
@@ -47,8 +50,14 @@ namespace LPI_Conditionals_HUDv1._2
 
 		class Game
 		{
+			//static void PlayerDeath() // eh. nvm.
+			//{
+			//	alive = false;
+			//	Console.WriteLine("Game Over.");
+			//	Console.ReadKey(true);
+			//}
 
-			public static void HealthStatus()
+			static void HealthStatus()
 			{
 				if (health == 100)
 				{
@@ -73,7 +82,7 @@ namespace LPI_Conditionals_HUDv1._2
 				else if (health <= 0)
 				{
 					health = 0;
-					Console.WriteLine("+ Player dead");
+					Console.WriteLine("+ Dead");
 				}
 				else
 				{
@@ -109,14 +118,15 @@ namespace LPI_Conditionals_HUDv1._2
 				}
 			}
 
-			static void takeDamage(int damage) //needs testing
+			static void takeDamage(int damage)
 			{
 				health = health - damage;
 				if (health < 0)
                 {
 					health = 0;
 					Console.ForegroundColor = ConsoleColor.Red;
-					Console.WriteLine("<!> Too much Damage Taken, Health value set to 0");
+					Console.WriteLine("<!> Too much Damage Taken, Health value set to 0.");
+					Console.ForegroundColor = ConsoleColor.Yellow;
 				}
 			} 
 
@@ -128,66 +138,75 @@ namespace LPI_Conditionals_HUDv1._2
 				score = score + points;
 			}
 
-			static void PowerUp(int powerUp)
-			{
-				attack = attack + powerUp;
-			}
-
-			static void Heal(int heal) //needs testing
+			static void Heal(int heal)
 			{
 				health = health + heal;
 				if (health > 100)
                 {
 					health = 100;
 					Console.ForegroundColor = ConsoleColor.Red;
-					Console.WriteLine("<!> Attepted to heal too much health, Health value set to 100");
+					Console.WriteLine("<!> Attepted to heal too much health, Health value set to 100.");
+					Console.ForegroundColor = ConsoleColor.Yellow;
 				}
 			}
 
-			static void Revive() //needs testing
+			static void Revive()
 			{
 				lives = lives - 1;
 				health = 100;
-				if (lives == 0)
-                {
-					Console.WriteLine("Game Over.");
-                }
+				//if (lives == 0) 
+				//{
+				//	PlayerDeath(); // eh. nvm.
+				//}
 			}
 
-			static void SwapWeapon(int swap) //needs testing
+			static void SwapWeapon(int swap)
 			{
-				if (swap == 1)
+				if (swap == 0)
+                {
+					weapon = "NA";
+					attack = 0;
+				}
+				else if (swap == 1)
 				{
-					Console.WriteLine(Weapon.Pistol);
+					weapon = "Pistol";
+					attack = 10;
 				}
 				else if (swap == 2)
 				{
-					Console.WriteLine(Weapon.ShotGun);
+					weapon = "ShotGun";
+					attack = 30;
 				}
 				else if (swap == 3)
 				{
-					Console.WriteLine(Weapon.Spreader);
+					weapon = "Spreader";
+					attack = 50;
 				}
 				else if (swap == 4)
 				{
-					Console.WriteLine(Weapon.Laser);
+					weapon = "Laser";
+					attack = 60;
 				}
 				else if (swap == 5)
 				{
-					Console.WriteLine(Weapon.Sniper);
+					weapon = "Sniper";
+					attack = 90;
 				}
 				else if (swap == 6)
 				{
-					Console.WriteLine(Weapon.BFG);
+					weapon = "BFG";
+					attack = 9999;
 				}
                 else
                 {
 					Console.ForegroundColor = ConsoleColor.Red;
-					Console.WriteLine("<!> Invalid weapon number, weapon range from 1-6");
+					weapon = "???";
+					Console.WriteLine("<!> Player attepted to swap to " + weapon + " Invalid weapon number, outside of range. Please run this operation again.");
+					Console.ForegroundColor = ConsoleColor.Yellow;
 				}
 			}
 
-			public void ShowHUD()
+			static void ShowHUD()
 			{
 				Console.ForegroundColor = ConsoleColor.DarkCyan;
 
@@ -202,8 +221,8 @@ namespace LPI_Conditionals_HUDv1._2
 				Console.WriteLine("---------------------------------");
 
 				Console.WriteLine("» Health: " + health);
-				Console.WriteLine("» Attack Power: " + attack); //replace this with weapon and the attack power is replaced with what weapon your holding
-				Console.WriteLine("» Weapon: " + Weapon.Pistol); //have this change with whatever weapon is in hand
+				Console.WriteLine("» Attack Power: " + attack);
+				Console.WriteLine("» Weapon: " + weapon); 
 				Console.WriteLine("» Lives: " + lives);
 				Console.WriteLine("» Score: " + score);
 
@@ -222,18 +241,17 @@ namespace LPI_Conditionals_HUDv1._2
 				Console.WriteLine();
 			}
 
-			public void GameStart() //needs updating with new gameplay 
+			public void GameStart()
 			{
 				//starting values 
 				health = 100;
-				attack = 50;
 				lives = 3;
-				score = 200.7f;
+				score = 0f;
+				SwapWeapon(0);
+				//alive = true; // eh. nvm.
 
-				//output
 				Console.WriteLine("> NSCC Game Dev");
 				Console.WriteLine("> Totally not a Game");
-				Console.WriteLine("<!> GamePlay has not been updated yet to display the new changes <!>");
 
 				Console.WriteLine();
 				Console.ReadKey(true);
@@ -241,13 +259,28 @@ namespace LPI_Conditionals_HUDv1._2
 				ShowHUD();
 				Console.ReadKey(true);
 
+				//while (alive == true) // eh. nvm. 
+                //{
 				void event1()
 				{
-					Console.WriteLine("! An Enemey Has appeared!");
+					Console.WriteLine("! A Boss Has appeared!");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
-					Console.WriteLine("> Player Attacked! Player dealt " + attack + " in damage to Enemy");
+					
+					SwapWeapon(69); //pretend error lol
+					Console.WriteLine();
+					Console.ReadKey(true);
+
+					SwapWeapon(1);
+					Console.WriteLine("> Player Swapped to " + weapon);
+					Console.WriteLine();
+					Console.ReadKey(true);
+
+					ShowHUD();
+					Console.ReadKey(true);
+
+					Console.WriteLine("> Player Attacked! Player dealt " + attack + " in damage to the Boss");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
@@ -265,18 +298,21 @@ namespace LPI_Conditionals_HUDv1._2
 
 				void event2()
 				{
-					damage = 20; // me small brain
-					takeDamage(damage); // DAMN IT YOU CAN FAAKING PUT VARIABLES IN THE BRACKETS OF METHODS W H A T?!
-					Console.WriteLine("! Enemy Attacked! Player has taken " + damage + " in damage From Enemy");
+					damage = 30;
+					takeDamage(damage);
+					Console.WriteLine("! The Boss Attacked! Player has taken " + damage + " in damage From Boss");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
 					ShowHUD();
 					Console.ReadKey(true);
 
-					heal = 10;
-					Heal(heal);
+					heal = 40;
 					Console.WriteLine("> Player healed " + heal + " HP");
+					Console.WriteLine();
+					Console.ReadKey(true);
+
+					Heal(heal);
 					Console.WriteLine();
 					Console.ReadKey(true);
 
@@ -287,10 +323,67 @@ namespace LPI_Conditionals_HUDv1._2
 				event2();
 
 				void event3()
-				{
-					damage = 90; //note to self. do range cheking for values and prevent overflow into the negative values.
+                {
+					SwapWeapon(2);
+					Console.WriteLine("> Player Swapped to " + weapon);
+					Console.WriteLine();
+					Console.ReadKey(true);
+
+					ShowHUD();
+					Console.ReadKey(true);
+
+					Console.WriteLine("> Player Attacked! Player dealt " + attack + " in damage to the Boss");
+					Console.WriteLine();
+					Console.ReadKey(true);
+
+					points = 15.5f;
+					AddScore(points, 1);
+					Console.WriteLine("> Player gained " + points + " Score");
+					Console.WriteLine();
+					Console.ReadKey(true);
+
+					ShowHUD();
+					Console.ReadKey(true);
+
+				}
+
+				event3();
+
+				void event4()
+                {
+					damage = 50;
 					takeDamage(damage);
-					Console.WriteLine("! Enemy Attacked! Player has take " + damage + " in damage From Enemy, its a critical hit!");
+					Console.WriteLine("! The Boss Attacked! Player has taken " + damage + " in damage From Boss");
+					Console.WriteLine();
+					Console.ReadKey(true);
+
+					ShowHUD();
+					Console.ReadKey(true);
+
+					heal = 50;
+					Console.WriteLine("> Player healed " + heal + " HP");
+					Heal(heal);
+					Console.WriteLine();
+					Console.ReadKey(true);
+
+					ShowHUD();
+					Console.ReadKey(true);
+
+					Console.WriteLine("> The Boss is enraged. it charges up for a massive attack!");
+					Console.WriteLine();
+					Console.ReadKey(true);
+				}
+
+				event4();
+
+				void event5()
+				{
+					damage = 110;
+					Console.WriteLine("! The Boss Attacked! Player has take " + damage + " in damage From Enemy, its a critical hit!");
+					Console.WriteLine();
+					Console.ReadKey(true);
+
+					takeDamage(damage);
 					Console.WriteLine();
 					Console.ReadKey(true);
 
@@ -306,24 +399,23 @@ namespace LPI_Conditionals_HUDv1._2
 					Console.ReadKey(true);
 				}
 
-				event3();
+				event5();
 
-				void event4()
+				void event6()
 				{
-					powerUp = 100;
-					PowerUp(powerUp);
-					Console.WriteLine("> Player gains a power up! Attack Power increased by " + powerUp);
+					SwapWeapon(6);
+					Console.WriteLine("> Player Swapped to " + weapon);
 					Console.WriteLine();
 					Console.ReadKey(true);
 
 					ShowHUD();
 					Console.ReadKey(true);
 
-					Console.WriteLine("> Player Attacked! Player dealt " + attack + " in damage to Enemy. Its a Critical hit!");
+					Console.WriteLine("> Player Attacked! Player dealt " + attack + " in damage to The Boss. Its a Critical hit!");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
-					Console.WriteLine("! Enemy Dies");
+					Console.WriteLine("! The Boss Dies");
 					Console.WriteLine();
 					Console.ReadKey(true);
 
@@ -342,7 +434,8 @@ namespace LPI_Conditionals_HUDv1._2
 					Console.ReadKey(true);
 				}
 
-				event4();
+				event6();
+				//}
 
 				Console.WriteLine("> Game End");
 				Console.ReadKey(true);
