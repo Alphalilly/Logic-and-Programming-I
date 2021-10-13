@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace LPI_Arrrays_AmmoSystem
 {
+    // Please ignore my mental breakdown in the code comments.
+    // Disclaimer: This is probably very unprofessional and I promise I acknowledge that and wont do the same thing in an actual work enviornment plz and thanks.
+
     class Program
     {
         public static int[] weapon = new int[5]; //this means that there are 5 slots. not the slots in the index go up to the number 5
@@ -40,17 +43,17 @@ namespace LPI_Arrrays_AmmoSystem
         //};
 
 
-        static void Main(string[] args)
+        static void Main()
         {
-            //weapon
-            weapon[0] = 1;
-            weapon[1] = 2;
-            weapon[2] = 3;
-            weapon[3] = 4;
-            weapon[4] = 5;
+            //weapon (the value of weapon[] is going to be plugged into ammo[] and weaponName[].
+            weapon[0] = 0; // was weapon[0] = 1; im stupid. thats why my code was doing the dumb.
+            weapon[1] = 1;
+            weapon[2] = 2;
+            weapon[3] = 3;
+            weapon[4] = 4;
 
             //weapon ammo
-            ammo[0] = 20;
+            ammo[0] = 20; //lol this was the hint yesterday~ when i was plugging in the numbers back into the array and it broke~ WHY DIDNT I NOTICE IT SOONER THAT IT WAS THE SAME THING FOR weapon[0] ~
             ammo[1] = 10;
             ammo[2] = 30;
             ammo[3] = 50;
@@ -63,24 +66,90 @@ namespace LPI_Arrrays_AmmoSystem
             weaponName[3] = "Lazer Gun";
             weaponName[4] = "BFG";
 
-            Fire(weapon[0]); //hol' up. Why does the output say "shot gun" and ammo "10", when I clearly specified weapon to be 0 in the array?
-                             // aaaa i dont have time to think of an answer.
+            // me yesterday: hol' up. Why does the output say "shot gun" and ammo "10", when I clearly specified weapon to be 0 in the array? 
+            // me today: no i didnt you dunce, I assigned it a 1 not 0, the [0] is its position in the array.
+
+            // i figured out why it wasnt displaying properly.  weapon[0] = 1  should be  weapon[0] = 0
+            // ofcourse it didint work cuz im plugging the numbers back into the array in the mothods below. telling it to use the number to go to "x" position in the array. 
+            // God what the hell. no one will know why I mean because im bad at comments and programming :)
+
+
+            Fire(weapon[0]);
+
             Console.ReadKey(true);
 
             Reload(weapon[0]);
 
             Console.ReadKey(true);
 
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("+ Weapon Switch!");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            DisplayGun(weapon[3]);
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.ReadKey(true);
+
+            Fire(weapon[3]);
+
+            Console.ReadKey(true);
+
+            Reload(weapon[3]);
+
+            Console.ReadKey(true);
+
+            Reload(weapon[3]);
+            Reload(weapon[3]);
+            Reload(weapon[3]);
+            Reload(weapon[3]);
+
+            Console.ReadKey(true);
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("+ Weapon Switch!");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            DisplayGun(weapon[1]);
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.ReadKey(true);
+
+            Fire(weapon[1]);
+            Fire(weapon[1]);
+            Fire(weapon[1]);
+            Fire(weapon[1]);
+            Fire(weapon[1]);
+            Fire(weapon[1]);
+            Fire(weapon[1]);
+            Fire(weapon[1]);
+            Fire(weapon[1]);
+            Fire(weapon[1]);
+            Fire(weapon[1]);
+            Fire(weapon[1]);
+
+            Console.ReadKey(true);
+
         }
 
-        // would be nice to create method that displays all the weapon status
+        static void DisplayGun(int weapon)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Current Weapon: " + weaponName[weapon]);
+            Console.WriteLine("Weapon Ammo: " + ammo[weapon]);
+            Console.WriteLine();
+        }
 
         static void Fire(int weapon) //decrements ammo
         {
-            Console.WriteLine("Fired " + weaponName[weapon] + " With ammo " + ammo[weapon]);
+            Console.WriteLine("> Weapon Fired!");
 
-            //if ammo is more then 0
-            if (ammo[weapon] < 0)
+            // this is   ammo[0]   so the if satement kinda looks like this     ammo[0] < 0     so then how do I tell it to compare    20 < 0  ?
+            // wait...   20 < 0    ????
+            // dont tell me ive been dumb this whole time.
+            // it should be   20 > 0    shouldnt it?
+            // matt im sorry ill go back to grade school math
+
+            //if ammo is less then 0
+            if (ammo[weapon] > 0) // why did it do ammo[weapon] < 0 ? that was dumb
             {
                 ammo[weapon]--;
             }
@@ -89,17 +158,16 @@ namespace LPI_Arrrays_AmmoSystem
 
             }
 
-            Console.WriteLine("now " + weaponName[weapon] + " With ammo " + ammo[weapon]); //fpr some reason the ammo value dosnt change dispite being decremented ><
+            DisplayGun(weapon);
 
         }
 
         static void Reload(int weapon) //adds ammo
         {
-            Console.WriteLine("Relaod " + weaponName[weapon] + " With ammo " + ammo[weapon]);
+            Console.WriteLine("> Weapon Reloaded!");
 
-            //if ammo is less then itself
-
-            if (ammo[weapon] > ammo[weapon])
+            //if ammo is more then itself
+            if (ammo[weapon] >= ammo[weapon]) // this still broken I dont wanna fix it right now.
             {
                 ammo[weapon]++;
             }
@@ -108,7 +176,7 @@ namespace LPI_Arrrays_AmmoSystem
 
             }
 
-            Console.WriteLine("now " + weaponName[weapon] + " With ammo " + ammo[weapon]);
+            DisplayGun(weapon);
         }
 
     }
