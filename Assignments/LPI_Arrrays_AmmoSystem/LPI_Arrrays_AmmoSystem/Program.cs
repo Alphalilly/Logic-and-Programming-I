@@ -11,6 +11,8 @@ namespace LPI_Arrrays_AmmoSystem
 
     class Program
     {
+        //make another array for capacity, this would work with the reload method.
+
         public static int[] weapon = new int[5]; //this means that there are 5 slots. not the slots in the index go up to the number 5
         //I keep getting a NullReferenceException when I do this. and I dont know why >< 
         // https://stackoverflow.com/questions/779091/what-does-object-reference-not-set-to-an-instance-of-an-object-mean
@@ -41,7 +43,7 @@ namespace LPI_Arrrays_AmmoSystem
         //    weaponName[3] = "Lazer Gun",
         //    weaponName[4] = "BFG"
         //};
-
+        
 
         static void Main()
         {
@@ -133,7 +135,7 @@ namespace LPI_Arrrays_AmmoSystem
         static void DisplayGun(int weapon)
         {
             Console.WriteLine();
-            Console.WriteLine("Current Weapon: " + weaponName[weapon]);
+            Console.WriteLine("Current Weapon: " + weaponName[weapon]); // or could be weaponName[weapon[0]] **cursed (array inside an array inside an array :3c)
             Console.WriteLine("Weapon Ammo: " + ammo[weapon]);
             Console.WriteLine();
         }
@@ -142,14 +144,23 @@ namespace LPI_Arrrays_AmmoSystem
         {
             Console.WriteLine("> Weapon Fired!");
 
+            ammo[weapon]--;
+
+            if (ammo[weapon] < 0)
+            {
+                ammo[weapon] = 0;
+            }
+
+            DisplayGun(weapon);
+
             // this is   ammo[0]   so the if satement kinda looks like this     ammo[0] < 0     so then how do I tell it to compare    20 < 0  ?
             // wait...   20 < 0    ????
             // dont tell me ive been dumb this whole time.
             // it should be   20 > 0    shouldnt it?
             // matt im sorry ill go back to grade school math
 
-            //if ammo is less then 0
-            if (ammo[weapon] > 0) // why did it do ammo[weapon] < 0 ? that was dumb
+            /* //this also worked, but its hella janky
+            if (ammo[weapon] > 0) 
             {
                 ammo[weapon]--;
             }
@@ -157,13 +168,14 @@ namespace LPI_Arrrays_AmmoSystem
             {
 
             }
-
-            DisplayGun(weapon);
-
+            */
         }
 
-        static void Reload(int weapon) //adds ammo
+        static void Reload(int weapon) //adds ammo (Broken)
         {
+            //so i guess that the reload would set the ammo to max, not increment it ><
+            //so it would be just this in the method   ammo[weapon] = cap[weapon]
+
             Console.WriteLine("> Weapon Reloaded!");
 
             //if ammo is more then itself
