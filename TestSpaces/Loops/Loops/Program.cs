@@ -186,7 +186,7 @@ namespace Loops
                 //only ends when gameOver = true;
 
 
-                //methods can give back a value int     this = canUseThis();
+                //methods can give back a value     int this = canUseThis();
                 //string is an array of chars
 
 
