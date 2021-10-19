@@ -12,9 +12,7 @@ namespace LPI_Loops_GameLoop
         // Draw player to screen
         // "move" player on screen
         // exit game
-        // extra: keep player in bounds of screen. make bounds scaleable
-
-        //press shift and move 2 chars over lol
+        // extra: keep player in bounds of screen. make bounds scaleable. press shift and move 2 chars over ? Sprint?
 
         static bool gameOver = false;
         static int x = 0;
@@ -138,7 +136,7 @@ namespace LPI_Loops_GameLoop
             {
                 x += 1;
             }
-            else if ((int)input == 27) // boi this is bootleg but I like it. Is this considerd Hard Coding???
+            else if ((int)input == 27) // boi this is bootleg but I like it. Is this considered Hard Coding???
             {
                 Console.WriteLine(" Game Exit");
                 Console.ReadKey(true);
